@@ -107,6 +107,14 @@ h4 {
 	color: #fff;
 }
 
+#question form {
+	margin-top: 50px;
+}
+
+#answer, #submit-btn {
+	font-size: 24px;
+}
+
 .footnote {
 	position: absolute;
 	bottom: 0px;
