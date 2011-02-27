@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
-gem 'activerecord'
+gem 'data_mapper'
+gem 'dm-postgres-adapter'
