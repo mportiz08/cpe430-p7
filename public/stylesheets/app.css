@@ -125,12 +125,19 @@ h4 {
 }
 
 #results th {
+	background: #222;
+	color: #fff;
 	border-bottom: 2px solid #333;
 	text-align: left;
 }
 
 #results tr:hover td {
-	background-color: #efefef;
+	background-color: #aaa;
+	color: #fff;
+}
+
+#results tr:nth-of-type(odd) {
+	background: #ddd;
 }
 
 .footnote {
