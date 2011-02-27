@@ -9,10 +9,10 @@ class Question
   include DataMapper::Resource
   
   property :id,              Serial
-  property :text,            String
-  property :answer,          String
-  property :total_correct,   Integer
-  property :total_incorrect, Integer
+  property :text,            String, :required => true
+  property :answer,          String, :required => true
+  property :total_correct,   Integer, :default => 0
+  property :total_incorrect, Integer, :default => 0
 end
 
 DataMapper.auto_upgrade!
