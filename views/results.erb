@@ -1,0 +1,21 @@
+<div id="results">
+	<h1>results</h1>
+  <table>
+	  <tr>
+	  	<th>id</th>
+	  	<th>question</th>
+	  	<th>answer</th>
+	  	<th class="good">correct</th>
+	  	<th class="bad">incorrect</th>
+	  </tr>
+	  <% @questions.each do |q| %>
+	    <tr>
+	      <td><%= q.id %></td>
+	      <td><%= q.text %></td>
+	      <td><%= q.answer %></td>
+	      <td><%= q.total_correct %></td>
+	      <td><%= q.total_incorrect %></td>
+	    </tr>
+	  <% end %>
+  </table>
+</div>

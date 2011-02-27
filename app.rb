@@ -25,3 +25,8 @@ get '/question/:id' do
   @question = Question.get(params[:id])
   erb :question
 end
+
+get '/results' do 
+  @questions = Question.all
+  erb :results
+end
