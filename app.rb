@@ -18,6 +18,7 @@ end
 DataMapper.auto_upgrade!
 
 get '/' do
+  @time = Time.now
   erb :index
 end
 

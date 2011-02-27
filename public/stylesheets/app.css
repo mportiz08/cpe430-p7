@@ -33,7 +33,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /*******************************************************************************************/
 html, body {
   background-color: #e7e7e7;
-  color: #333;
+  color: #222;
   font-family: "Helvetica Neue", helvetica, sans-serif;
   height: 100%;
 }
@@ -62,39 +62,10 @@ h4 {
   font-size: 18px;
 }
 
-table {
-	width: 800px;
-	margin: 0 auto;
-	border-collapse: collapse;
-}
-
-td, th {
-	padding: 15px;
-}
-
-th {
-	border-bottom: 2px solid #333;
-}
-
-td {
-	border-bottom: 1px solid #333;
-}
-
-tr:hover td {
-	background-color: #efffff;
-}
-
 .bubble {
-	background: #444;
 	width: 800px;
 	margin: 0 auto;
 	padding: 50px 0;
-	box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
 }
 
 #container {
@@ -113,10 +84,6 @@ tr:hover td {
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#hello-world, #question p {
-	color: #555;
-}
-
 #question {
 	text-align: center;
 	height: 400px;
@@ -126,7 +93,6 @@ tr:hover td {
 #question h1 {
 	font-size: 48px;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-	color: #fff;
 }
 
 #question form {
@@ -139,6 +105,32 @@ tr:hover td {
 
 #results h1 {
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#results table {
+	width: 800px;
+	margin: 50px auto 0 auto;
+	border-collapse: collapse;
+	background: #efefef;
+	box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+}
+
+#results td, #results th {
+	padding: 15px;
+}
+
+#results th {
+	border-bottom: 2px solid #333;
+	text-align: left;
+}
+
+#results tr:hover td {
+	background-color: #efefef;
 }
 
 .footnote {
