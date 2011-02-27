@@ -22,5 +22,6 @@ get '/' do
 end
 
 get '/question/:id' do
+  @question = Question.get(params[:id])
   erb :question
 end
