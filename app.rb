@@ -62,7 +62,7 @@ post '/question/:id' do
   end
   
   next_id = params[:id].to_i + 1
-  unless next_id == 6
+  unless next_id == 7
     redirect "/question/#{next_id.to_s}"
   else
     redirect "/results"
