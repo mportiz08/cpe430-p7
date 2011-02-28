@@ -8,6 +8,11 @@ enable :sessions
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
 
+helpers do
+  include Rack::Utils
+  alias_method :h, :escape_html
+end
+
 class Question
   include DataMapper::Resource
   
@@ -41,8 +46,15 @@ end
 
 post '/question/:id' do
   @question = Question.get(params[:id])
+  session["q#{params[:id]}"] = params[:answer]
   
-  session["q#{params[:id]}".to_sym] = params[:answer]
+  if params[:answer] == @question.answer
+    @question.total_correct += 1
+    @question.save
+  else
+    @question.total_incorrect += 1
+    @question.save
+  end
   
   next_id = params[:id].to_i + 1
   unless next_id == 6
@@ -54,6 +66,8 @@ end
 
 get '/results' do 
   @questions = Question.all
+  @answers = session
   ap session
+  ap @answers
   erb :results
 end
