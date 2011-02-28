@@ -12,11 +12,12 @@
 	    <tr>
 	      <td><%= q.id %></td>
 	      <td><%= q.text %></td>
-	      <td><%= h @answers["q#{(i + 1)}"]%></td>
+	      <td><%= show_answer(@answers["q#{(i + 1)}"], q.answer) %></td>
 	      <td><%= q.answer %></td>
 	      <td><%= q.percent_correct %></td>
-	<% puts i %>
 	    </tr>
 	  <% end %>
   </table>
+  <p id="legend"><span class="good">correct answer</span> | <span class="bad">incorrect answer</span></p>
+  <p id="try-again"><a href="/question/1">try again?</a></p>
 </div>

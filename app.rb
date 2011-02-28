@@ -11,6 +11,12 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/developm
 helpers do
   include Rack::Utils
   alias_method :h, :escape_html
+  
+  def show_answer(actual, expected)
+    klass = "good"
+    klass = "bad" unless actual == expected
+    "<span class=\"#{klass}\">#{h actual}</span>"
+  end
 end
 
 class Question
