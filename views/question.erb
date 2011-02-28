@@ -2,8 +2,8 @@
   <div class="bubble">
 	  <h1><%= @question.text %></h1>
 	</div>
-	<form>
-		<input autofocus="autofocus" id="answer" size="30" type="text">
+	<form action="<%= @question.id %>" method="post">
+		<input autofocus="autofocus" id="answer" size="30" type="text" name="answer">
 		<button id="submit-btn" type="submit">next</button>
   </form>
 </div>
