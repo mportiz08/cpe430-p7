@@ -6,7 +6,7 @@
 	  	<th>question</th>
 	  	<th>your answer</th>
 	    <th>correct answer</th>
-	  	<th>% correct</th>
+	  	<th>% correct *</th>
 	  </tr>
 	  <% @questions.each_with_index do |q, i| %>
 	    <tr>
@@ -18,6 +18,10 @@
 	    </tr>
 	  <% end %>
   </table>
-  <p id="legend"><span class="good">correct answer</span> | <span class="bad">incorrect answer</span></p>
-  <p id="try-again"><a href="/question/1">try again?</a></p>
+  <p id="legend"><span class="good">correct answer</span>&nbsp;&nbsp;&nbsp;<span class="bad">incorrect answer</span></p>
+  <p id="try-again">
+	  <a href="/">go home</a>&nbsp;or&nbsp;
+	  <a href="/question/1">try again?</a>
+	</p>
+  <div class="footnote">* for all users</div>
 </div>

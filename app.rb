@@ -2,7 +2,6 @@ require 'rubygems'
 require 'sinatra'
 require 'erb'
 require 'data_mapper'
-require 'ap'
 
 enable :sessions
 
@@ -73,7 +72,5 @@ end
 get '/results' do 
   @questions = Question.all
   @answers = session
-  ap session
-  ap @answers
   erb :results
 end

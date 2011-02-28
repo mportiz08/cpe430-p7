@@ -154,7 +154,7 @@ h4 {
 }
 
 #legend {
-	margin-top: 75px;
+	margin-top: 50px;
 	text-align: center;
 }
 
@@ -164,7 +164,7 @@ h4 {
 
 .footnote {
 	position: absolute;
-	bottom: 0px;
+	bottom: 15px;
 }
 
 .good {
